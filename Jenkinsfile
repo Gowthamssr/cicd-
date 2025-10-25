@@ -5,7 +5,11 @@ pipeline
     stage('Checkout'){
       steps{
         echo 'checking out code'
-        git 'https://github.com/Gowthamssr/jenkins.git'
+         git(
+          url: 'https://github.com/Gowthamssr/jenkins.git',
+          branch: 'main',
+          credentialsId: 'github-token'
+        )
       }     
       }
       stage('Build'){
