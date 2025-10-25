@@ -19,6 +19,7 @@ pipeline
           echo 'testing code'
           sh 'npm test'
         }
+      }
 
         stage('Deploy'){
           steps{
@@ -27,5 +28,4 @@ pipeline
           }
         }
 }
-  }
 }
