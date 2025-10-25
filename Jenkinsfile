@@ -2,25 +2,25 @@ pipeline
 {
   agent any
   stages{
-    stage('checkout'){
+    stage('Checkout'){
       steps{
         echo 'checking out code'
-        git branch: 'main', url: 'https://github.com/Gowthamssr/jenkins.git'
+        git 'https://github.com/Gowthamssr/jenkins.git'
       }     
       }
-      stage('build'){
+      stage('Build'){
         steps{
           echo 'building code'
           sh 'npm install'
         }
       }
-      stage('test'){
+      stage('Test'){
         steps{
           echo 'testing code'
           sh 'npm test'
         }
 
-        stage('deploy'){
+        stage('Deploy'){
           steps{
             echo 'deploying code'
             sh 'npm run deploy  '
