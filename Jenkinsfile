@@ -6,7 +6,7 @@ pipeline
       steps{
         echo 'checking out code'
          git(
-          url: 'https://github.com/Gowthamssr/jenkins.git',
+          url: 'https://github.com/Gowthamssr/cicd-.git',
           branch: 'main',
           credentialsId: 'github-token'
         )
